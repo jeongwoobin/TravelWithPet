@@ -1,4 +1,4 @@
-package com.example.travelwithpet.ui.theme
+package com.foxydev97.travelwithpet.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

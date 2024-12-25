@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.travelwithpet"
+    namespace = "com.foxydev97.travelwithpet"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.travelwithpet"
+        applicationId = "com.foxydev97.travelwithpet"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

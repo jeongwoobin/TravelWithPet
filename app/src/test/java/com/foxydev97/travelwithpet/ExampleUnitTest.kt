@@ -1,4 +1,4 @@
-package com.example.travelwithpet
+package com.foxydev97.travelwithpet
 
 import org.junit.Test
 
