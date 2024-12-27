@@ -23,6 +23,9 @@ androidTools = "31.7.2"
 roomKtx = "2.6.1"
 composeCompiler = "1.5.15"
 
+# private
+kotlinxSerialization = "1.7.3"
+
 [libraries]
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -48,10 +51,24 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
+# private
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomKtx" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomKtx" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
+
+
 [plugins]
 # Custom Convention Plugin
-multi-module-android-application = { id = "multi.module.android.application", version = "unspecified"}
-multi-module-android-application-compose = { id = "multi.module.android.application.compose", version = "unspecified"}
+multi-module-android-application = { id = "multi.module.android.application", version = "unspecified" }
+multi-module-android-application-compose = { id = "multi.module.android.application.compose", version = "unspecified" }
+multi-module-android-library = { id = "multi.module.android.library", version = "unspecified" }
+multi-module-android-library-compose = { id = "multi.module.android.library.compose", version = "unspecified" }
+multi-module-android-presentation-ui = { id = "multi.module.android.presentation.ui", version = "unspecified" }
+multi-module-android-room = { id = "multi.module.android.room", version = "unspecified" }
+multi-module-jvm-library = { id = "multi.module.jvm.library", version = "unspecified" }
 
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -59,3 +76,24 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
+# private
+jetbrains-kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+room = { id = "androidx.room", version.ref = "roomKtx" }
+devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+
+
+[bundles]
+compose = [
+    "androidx-activity-compose",
+    "androidx-lifecycle-runtime-compose",
+    "androidx-lifecycle-viewmodel-compose",
+    "androidx-material3",
+    "androidx-ui",
+    "androidx-ui-graphics",
+    "androidx-ui-tooling-preview",
+]
+compose-debug = [
+    "androidx-ui-tooling",
+    "androidx-ui-test-manifest",
+]

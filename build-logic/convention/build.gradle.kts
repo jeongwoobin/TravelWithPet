@@ -22,5 +22,25 @@ gradlePlugin {
             id = "multi.module.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
+        register("androidLibrary") {
+            id = "multi.module.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidLibraryCompose") {
+            id = "multi.module.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("androidPresentationUI") {
+            id = "multi.module.android.presentation.ui"
+            implementationClass = "AndroidPresentationUIConventionPlugin"
+        }
+        register("androidRoom") {
+            id = "multi.module.android.room"
+            implementationClass = "AndroidRoomConventionPlugin"
+        }
+        register("jvmLibrary") {
+            id = "multi.module.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
     }
 }
