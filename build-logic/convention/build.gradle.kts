@@ -46,5 +46,9 @@ gradlePlugin {
             id = "multi.module.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
+        register("androidRetrofit") {
+            id = "multi.module.android.retrofit"
+            implementationClass = "AndroidRetrofitConventionPlugin"
+        }
     }
 }

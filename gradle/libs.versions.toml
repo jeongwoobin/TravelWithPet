@@ -26,6 +26,7 @@ composeCompiler = "1.5.15"
 # private
 kotlinxSerialization = "1.7.3"
 hiltAndroid = "2.49"
+retrofit = "2.11.0"
 
 [libraries]
 # Dependencies of the included build-logic
@@ -63,7 +64,8 @@ hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-comp
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltAndroid" }
 hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hiltAndroid" }
 hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "hiltAndroid" }
-
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit"}
 
 [plugins]
 # Custom Convention Plugin
@@ -75,6 +77,7 @@ multi-module-android-presentation-ui = { id = "multi.module.android.presentation
 multi-module-android-room = { id = "multi.module.android.room", version = "unspecified" }
 multi-module-jvm-library = { id = "multi.module.jvm.library", version = "unspecified" }
 multi-module-android-hilt = { id = "multi.module.android.hilt", version = "unspecified" }
+multi-module-android-retrofit = { id = "multi.module.android.retrofit", version = "unspecified" }
 
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
