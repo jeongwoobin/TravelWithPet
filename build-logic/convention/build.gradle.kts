@@ -50,5 +50,9 @@ gradlePlugin {
             id = "multi.module.android.retrofit"
             implementationClass = "AndroidRetrofitConventionPlugin"
         }
+        register("androidOkhttp") {
+            id = "multi.module.android.okhttp"
+            implementationClass = "AndroidOkhttpConventionPlugin"
+        }
     }
 }
