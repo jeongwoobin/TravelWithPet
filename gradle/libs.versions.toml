@@ -28,6 +28,7 @@ kotlinxSerialization = "1.7.3"
 hiltAndroid = "2.49"
 retrofit = "2.11.0"
 okhttp = "4.12.0"
+moshi = "1.15.1"
 
 [libraries]
 # Dependencies of the included build-logic
@@ -69,6 +70,7 @@ retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = 
 retrofit-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit"}
 okhttp-bom = { group = "com.squareup.okhttp3", name="okhttp-bom", version.ref = "okhttp" }
 okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
 
 [plugins]
 # Custom Convention Plugin
@@ -82,6 +84,7 @@ multi-module-jvm-library = { id = "multi.module.jvm.library", version = "unspeci
 multi-module-android-hilt = { id = "multi.module.android.hilt", version = "unspecified" }
 multi-module-android-retrofit = { id = "multi.module.android.retrofit", version = "unspecified" }
 multi-module-android-okhttp = { id = "multi.module.android.okhttp", version = "unspecified" }
+multi-module-android-moshi = { id = "multi.module.android.moshi", version = "unspecified" }
 
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

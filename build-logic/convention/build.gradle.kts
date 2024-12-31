@@ -54,5 +54,9 @@ gradlePlugin {
             id = "multi.module.android.okhttp"
             implementationClass = "AndroidOkhttpConventionPlugin"
         }
+        register("androidMoshi") {
+            id = "multi.module.android.moshi"
+            implementationClass = "AndroidMoshiConventionPlugin"
+        }
     }
 }
