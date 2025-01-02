@@ -25,6 +25,11 @@ composeCompiler = "1.5.15"
 
 # private
 kotlinxSerialization = "1.7.3"
+hiltAndroid = "2.49"
+retrofit = "2.11.0"
+okhttp = "4.12.0"
+moshi = "1.15.1"
+logger = "2.2.0"
 
 [libraries]
 # Dependencies of the included build-logic
@@ -58,7 +63,16 @@ androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomKtx" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomKtx" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
-
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltAndroid" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltAndroid" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hiltAndroid" }
+hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "hiltAndroid" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit"}
+okhttp-bom = { group = "com.squareup.okhttp3", name="okhttp-bom", version.ref = "okhttp" }
+okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+logger = { module = "com.orhanobut:logger", version.ref = "logger" }
 
 [plugins]
 # Custom Convention Plugin
@@ -69,6 +83,11 @@ multi-module-android-library-compose = { id = "multi.module.android.library.comp
 multi-module-android-presentation-ui = { id = "multi.module.android.presentation.ui", version = "unspecified" }
 multi-module-android-room = { id = "multi.module.android.room", version = "unspecified" }
 multi-module-jvm-library = { id = "multi.module.jvm.library", version = "unspecified" }
+multi-module-android-hilt = { id = "multi.module.android.hilt", version = "unspecified" }
+multi-module-android-retrofit = { id = "multi.module.android.retrofit", version = "unspecified" }
+multi-module-android-okhttp = { id = "multi.module.android.okhttp", version = "unspecified" }
+multi-module-android-moshi = { id = "multi.module.android.moshi", version = "unspecified" }
+multi-module-android-logger = { id = "multi.module.android.logger", version = "unspecified" }
 
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -80,6 +99,7 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 jetbrains-kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 room = { id = "androidx.room", version.ref = "roomKtx" }
 devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 
 
 

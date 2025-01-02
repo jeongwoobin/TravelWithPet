@@ -42,5 +42,25 @@ gradlePlugin {
             id = "multi.module.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
+        register("androidHilt") {
+            id = "multi.module.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
+        register("androidRetrofit") {
+            id = "multi.module.android.retrofit"
+            implementationClass = "AndroidRetrofitConventionPlugin"
+        }
+        register("androidOkhttp") {
+            id = "multi.module.android.okhttp"
+            implementationClass = "AndroidOkhttpConventionPlugin"
+        }
+        register("androidMoshi") {
+            id = "multi.module.android.moshi"
+            implementationClass = "AndroidMoshiConventionPlugin"
+        }
+        register("androidLogger") {
+            id = "multi.module.android.logger"
+            implementationClass = "AndroidLoggerConventionPlugin"
+        }
     }
 }
